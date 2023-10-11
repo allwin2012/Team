@@ -10,7 +10,7 @@ export const Banner = () => {
     const [isDeleting, setIsDeleting] = useState(false);
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300 - Math.random() * 100);
-    const toRotate = ["Web Developer", "Web Designer", "UI/UX Designer"];
+    const toRotate = ["Full-Stack Web Developer", "Mobile App Developer", "Software Engineer","WordPress Developer","Automation Engineer"];
     const period = 2000;
 
     useEffect(() => {
@@ -52,7 +52,7 @@ export const Banner = () => {
                                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                                     <span className="tagline">Welcome to my Portfolio</span>
                                     <h1>{`Hi I'm Allwin A! `}<span className="wrap">{text}</span></h1>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis similique ut nemo doloremque, ea maiores minima, deserunt, nulla nihil impedit omnis. Necessitatibus nisi ratione dicta, ipsum explicabo natus et quas.</p>
+                                    <p>As a Software Engineer, I delved into front-end development, creating captivating user interfaces. Transitioning into SharePoint development, I customized and optimized collaboration platforms. My passion for efficiency led to workflow automation. Additionally, I'm a proficient "WordPress Developer" with four client sites and a MEAN stack developer, handling full-stack development. I thrive on innovation, continuously pursuing fresh challenges and boundless opportunities in the tech landscape.</p>
                                     <button onClick={() => console.log('connect')}>Let's connect <ArrowRightCircle size={25} /></button>
                                 </div>
                             }
