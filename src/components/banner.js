@@ -51,7 +51,7 @@ export const Banner = () => {
                             {({ isVisible }) =>
                                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                                     <span className="tagline">Welcome to my Portfolio</span>
-                                    <h1>{`Hi I'm Allwin A! `}<span className="wrap">{text}</span></h1>
+                                    <h1>{`Hi I'm Allwin! `}<span className="wrap">{text}</span></h1>
                                     <p>As a Software Engineer, I delved into front-end development, creating captivating user interfaces. Transitioning into SharePoint development, I customized and optimized collaboration platforms. My passion for efficiency led to workflow automation. Additionally, I'm a proficient "WordPress Developer" with four client sites and a MEAN stack developer, handling full-stack development. I thrive on innovation, continuously pursuing fresh challenges and boundless opportunities in the tech landscape.</p>
                                     <button onClick={() => console.log('connect')}>Let's connect <ArrowRightCircle size={25} /></button>
                                 </div>
