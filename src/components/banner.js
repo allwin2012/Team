@@ -52,7 +52,7 @@ export const Banner = () => {
                                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                                     <span className="tagline">Welcome to my Portfolio</span>
                                     <h1>{`Hi I'm Allwin! `}<span className="wrap">{text}</span></h1>
-                                    <p>As a Software Engineer, I delved into front-end development, creating captivating user interfaces. Transitioning into SharePoint development, I customized and optimized collaboration platforms. My passion for efficiency led to workflow automation. Additionally, I'm a proficient "WordPress Developer" with four client sites and a MEAN stack developer, handling full-stack development. I thrive on innovation, continuously pursuing fresh challenges and boundless opportunities in the tech landscape.</p>
+                                    <p>I have been working as a developer since 2020. I’ve always been someone who has both a creative and a logical side. When I discovered web design in college, I realized it would be the perfect fit. I could use my creative side to design and my logical side to code. As a bonus, being both designer and developer allows me to make sure no detail is lost in translation.</p>
                                     <button onClick={() => console.log('connect')}>Let's connect <ArrowRightCircle size={25} /></button>
                                 </div>
                             }

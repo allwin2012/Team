@@ -35,23 +35,23 @@ export const Skills = () => {
                             <h2>
                                 Skills
                             </h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis similique ut nemo doloremque, ea maiores minima, deserunt, nulla nihil impedit omnis. Necessitatibus nisi ratione dicta, ipsum explicabo natus et quas.</p>
+                            <p>Experienced in Python and React for web development, with additional expertise in SharePoint, Power Automate, Power Apps, WordPress, and low-code mobile app development.</p>
                             <Carousel responsive={responsive} infinite={true} className="skill-slider">
                                 <div className="item">
                                     <img src={meter1} alt="Image" />
-                                    <h5>Web Development</h5>
+                                    <h5>Full Stack Web Development</h5>
                                 </div>
                                 <div className="item">
                                     <img src={meter2} alt="Image" />
-                                    <h5>Brand Identity</h5>
+                                    <h5>Mobile App Development</h5>
                                 </div>
                                 <div className="item">
                                     <img src={meter3} alt="Image" />
-                                    <h5>Logo Design</h5>
+                                    <h5>Software Development</h5>
                                 </div>
                                 <div className="item">
                                     <img src={meter1} alt="Image" />
-                                    <h5>Web Development</h5>
+                                    <h5>low-code Development</h5>
                                 </div>
                             </Carousel>
                         </div>
