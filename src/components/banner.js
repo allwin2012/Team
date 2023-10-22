@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import headerImg from "../assets/img/header-img.svg";
@@ -42,6 +42,16 @@ export const Banner = () => {
         }
     }
 
+    const scrollToConnect = () => {
+        const contactSection = document.getElementById('connect'); // Match the section's id
+        if (contactSection) {
+            window.scrollTo({
+                top: contactSection.offsetTop,
+                behavior: 'smooth',
+            });
+        }
+    };
+
     return (
         <section className="banner" id="home">
             <Container>
@@ -53,7 +63,7 @@ export const Banner = () => {
                                     <span className="tagline">Welcome to my Portfolio</span>
                                     <h1>{`Hi I'm Allwin! `}<span className="wrap">{text}</span></h1>
                                     <p>I have been working as a developer since 2020. I’ve always been someone who has both a creative and a logical side. When I discovered web design in college, I realized it would be the perfect fit. I could use my creative side to design and my logical side to code. As a bonus, being both designer and developer allows me to make sure no detail is lost in translation.</p>
-                                    <button onClick={() => console.log('connect')}>Let's connect <ArrowRightCircle size={25} /></button>
+                                    <button onClick={scrollToConnect}>Let's connect <ArrowRightCircle size={25} /></button>
                                 </div>
                             }
                         </TrackVisibility>
@@ -70,4 +80,4 @@ export const Banner = () => {
             </Container>
         </section>
     );
-}
+};

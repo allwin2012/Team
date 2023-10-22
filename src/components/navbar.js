@@ -52,7 +52,7 @@ export const NavBar = () => {
                                 <a href='https://www.linkedin.com/in/allwin-a-739286194?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'><img src={navIcon1} alt='LinkedIn' /></a>
                                 {/* <a href='https://www.facebook.com/james.plamondon74/'><img src={navIcon2} alt='Facebook' /></a> */}
                                 <a href='https://instagram.com/allwin_.a?igshid=OGQ5ZDc2ODk2ZA=='><img src={navIcon3} alt='Instagram' /></a>
-                            </div>
+                            </div>  
                             <HashLink to='#connect'>
                                 <button className='vvd'><span>Let's Connect</span></button>
                             </HashLink>
