@@ -3,7 +3,6 @@ import { Col, Container, Row } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
-import emailjs from "emailjs-com";
 
 export const Contact = () => {
     const formInitialDetails = {
@@ -12,7 +11,7 @@ export const Contact = () => {
         email: '',
         phone: '',
         message: ''
-    }
+    };
 
     const [formDetails, setFormDetails] = useState(formInitialDetails);
     const [buttonText, setButtonText] = useState('Send');
@@ -22,37 +21,36 @@ export const Contact = () => {
         setFormDetails({
             ...formDetails,
             [category]: value
-        })
+        });
     };
 
     const sendEmail = async () => {
         setButtonText('Sending...');
-
-        const emailData = {
-            to_email: "allwinraj2012@outlook.com", // Replace with the recipient's email address
-            from_name: formDetails.firstName + " " + formDetails.lastName,
-            from_email: formDetails.email,
-            phone: formDetails.phone,
-            message: formDetails.message
-        };
-
-        const userId = 'emFwEGG_wfuLF5GA0'; // Replace with your Mail.js user ID
-        const serviceId = 'service_trpfmt7'; // Replace with your Mail.js service ID
-        const templateId = 'template_t6i6son'; // Replace with your Mail.js template ID
-
-        emailjs
-            .send(serviceId, templateId, emailData, userId)
-            .then(
-                function (response) {
-                    setButtonText('Send');
-                    setFormDetails(formInitialDetails);
-                    setStatus({ success: true, message: 'Message sent successfully' });
+        
+        try {
+            const response = await fetch("http://localhost:5000/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
                 },
-                function (error) {
-                    setButtonText('Send');
-                    setStatus({ success: false, message: 'Something went wrong, please try again later.' });
-                }
-            );
+                body: JSON.stringify(formDetails)
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+                setButtonText('Send');
+                setFormDetails(formInitialDetails);
+                setStatus({ success: true, message: 'Message sent successfully' });
+            } else {
+                setButtonText('Send');
+                setStatus({ success: false, message: result.error || 'Something went wrong, please try again later.' });
+            }
+        } catch (error) {
+            console.error("Error sending message:", error);
+            setButtonText('Send');
+            setStatus({ success: false, message: 'Something went wrong, please try again later.' });
+        }
     };
 
     return (

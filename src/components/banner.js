@@ -10,7 +10,7 @@ export const Banner = () => {
     const [isDeleting, setIsDeleting] = useState(false);
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300 - Math.random() * 100);
-    const toRotate = ["Full-Stack Web Developer", "Mobile App Developer", "Software Engineer","WordPress Developer","Automation Engineer"];
+    const toRotate = ["Software Developer","Front-End Developer","Back-End Developer","Wordpress and sharepoint Developer"];
     const period = 2000;
 
     useEffect(() => {
@@ -62,7 +62,7 @@ export const Banner = () => {
                                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                                     <span className="tagline">Welcome to my Portfolio</span>
                                     <h1>{`Hi I'm Allwin! `}<span className="wrap">{text}</span></h1>
-                                    <p>I have been working as a developer since 2020. I’ve always been someone who has both a creative and a logical side. When I discovered web design in college, I realized it would be the perfect fit. I could use my creative side to design and my logical side to code. As a bonus, being both designer and developer allows me to make sure no detail is lost in translation.</p>
+                                    <p>Enthusiastic and results-driven software engineer with two years of practical experience delivering effective solutions across diverse domains. Skilled in React.js, Node.js, WordPress, and PHP, with a strong track record of building intuitive user interfaces and scalable applications. Proficient in Microsoft Power Automate and Power Apps, enabling streamlined business processes and enhanced operational efficiency. Dedicated to optimizing user experiences and passionate about continuous learning to stay current with the latest technological advancements.</p>
                                     <button onClick={scrollToConnect}>Let's connect <ArrowRightCircle size={25} /></button>
                                 </div>
                             }

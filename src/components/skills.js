@@ -35,15 +35,15 @@ export const Skills = () => {
                             <h2>
                                 Skills
                             </h2>
-                            <p>Experienced in Python and React for web development, with additional expertise in SharePoint, Power Automate, Power Apps, WordPress, and low-code mobile app development.</p>
+                            <p>Experienced in Frontend and Backend for web development, with additional expertise in SharePoint, Power Automate, Power Apps and WordPress.</p>
                             <Carousel responsive={responsive} infinite={true} className="skill-slider">
                                 <div className="item">
                                     <img src={meter1} alt="Image" />
-                                    <h5>Full Stack Web Development</h5>
+                                    <h5>Front-End </h5>
                                 </div>
                                 <div className="item">
                                     <img src={meter2} alt="Image" />
-                                    <h5>Mobile App Development</h5>
+                                    <h5>Back-End</h5>
                                 </div>
                                 <div className="item">
                                     <img src={meter3} alt="Image" />
@@ -51,7 +51,7 @@ export const Skills = () => {
                                 </div>
                                 <div className="item">
                                     <img src={meter1} alt="Image" />
-                                    <h5>low-code Development</h5>
+                                    <h5>Power Apps and Power Automate</h5>
                                 </div>
                             </Carousel>
                         </div>
