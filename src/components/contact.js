@@ -3,6 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import emailjs from 'emailjs-com';
 
 export const Contact = () => {
     const formInitialDetails = {
@@ -24,33 +25,35 @@ export const Contact = () => {
         });
     };
 
-    const sendEmail = async () => {
+    const sendEmail = (e) => {
+        e.preventDefault();
         setButtonText('Sending...');
-        
-        try {
-            const response = await fetch("http://localhost:5000/contact", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(formDetails)
-            });
 
-            const result = await response.json();
+        const templateParams = {
+            firstName: formDetails.firstName,
+            lastName: formDetails.lastName,
+            email: formDetails.email,
+            phone: formDetails.phone,
+            message: formDetails.message,
+        };
 
-            if (response.ok) {
-                setButtonText('Send');
-                setFormDetails(formInitialDetails);
-                setStatus({ success: true, message: 'Message sent successfully' });
-            } else {
-                setButtonText('Send');
-                setStatus({ success: false, message: result.error || 'Something went wrong, please try again later.' });
-            }
-        } catch (error) {
-            console.error("Error sending message:", error);
+        emailjs.send(
+            'service_em9513v',
+            'Allwin20',
+            templateParams,
+            'YO984Pe5BZJt0xOra'
+        )
+        .then((response) => {
+            console.log('Email sent successfully:', response.status, response.text);
+            setButtonText('Send');
+            setStatus({ success: true, message: 'Message sent successfully' });
+            setFormDetails(formInitialDetails);
+        })
+        .catch((error) => {
+            console.error('Error sending email:', error);
             setButtonText('Send');
             setStatus({ success: false, message: 'Something went wrong, please try again later.' });
-        }
+        });
     };
 
     return (
@@ -69,10 +72,7 @@ export const Contact = () => {
                             {({ isVisible }) => (
                                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                                     <h2>Get In Touch</h2>
-                                    <form onSubmit={(e) => {
-                                        e.preventDefault();
-                                        sendEmail();
-                                    }}>
+                                    <form onSubmit={sendEmail}>
                                         <Row>
                                             <Col size={12} sm={6} className="px-1">
                                                 <input type="text" name="firstName" value={formDetails.firstName} placeholder="First Name" onChange={(e) => onFormUpdate('firstName', e.target.value)} />
