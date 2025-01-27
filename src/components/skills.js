@@ -38,19 +38,19 @@ export const Skills = () => {
                             <p>Experienced in Frontend and Backend for web development, with additional expertise in SharePoint, Power Automate, Apps Develpment.</p>
                             <Carousel responsive={responsive} infinite={true} className="skill-slider">
                                 <div className="item">
-                                    <img src={meter1} alt="Image" />
+                                    <image src={meter1} alt="Image" />
                                     <h5>Front-End </h5>
                                 </div>
                                 <div className="item">
-                                    <img src={meter2} alt="Image" />
+                                    <image src={meter2} alt="Image" />
                                     <h5>Back-End</h5>
                                 </div>
                                 <div className="item">
-                                    <img src={meter3} alt="Image" />
+                                    <image src={meter3} alt="Image" />
                                     <h5>Software Development</h5>
                                 </div>
                                 <div className="item">
-                                    <img src={meter1} alt="Image" />
+                                    <image src={meter1} alt="Image" />
                                     <h5>App Development</h5>
                                 </div>
                             </Carousel>
@@ -58,7 +58,7 @@ export const Skills = () => {
                     </Col>
                 </Row>
             </Container>
-            <img className="background-image-left" src={colorSharp} />
+            <image className="background-image-left" src={colorSharp} />
         </section>
     );
 }
