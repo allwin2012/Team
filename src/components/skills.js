@@ -35,7 +35,7 @@ export const Skills = () => {
                             <h2>
                                 Skills
                             </h2>
-                            <p>Experienced in Frontend and Backend for web development, with additional expertise in SharePoint, Power Automate, Power Apps and WordPress.</p>
+                            <p>Experienced in Frontend and Backend for web development, with additional expertise in SharePoint, Power Automate, Apps Develpment.</p>
                             <Carousel responsive={responsive} infinite={true} className="skill-slider">
                                 <div className="item">
                                     <img src={meter1} alt="Image" />
@@ -51,7 +51,7 @@ export const Skills = () => {
                                 </div>
                                 <div className="item">
                                     <img src={meter1} alt="Image" />
-                                    <h5>Power Apps and Power Automate</h5>
+                                    <h5>App Development</h5>
                                 </div>
                             </Carousel>
                         </div>

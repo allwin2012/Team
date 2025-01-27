@@ -10,7 +10,7 @@ export const Banner = () => {
     const [isDeleting, setIsDeleting] = useState(false);
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300 - Math.random() * 100);
-    const toRotate = ["Software Developer","Front-End Developer","Back-End Developer","Wordpress and sharepoint Developer"];
+    const toRotate = ["Software Developer","Front-End Developer","Back-End Developer","App Developer",];
     const period = 2000;
 
     useEffect(() => {
@@ -60,9 +60,17 @@ export const Banner = () => {
                         <TrackVisibility>
                             {({ isVisible }) =>
                                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                                    <span className="tagline">Welcome to my Portfolio</span>
-                                    <h1>{`Hi I'm Allwin! `}<span className="wrap">{text}</span></h1>
-                                    <p>Enthusiastic and results-driven software engineer with two years of practical experience delivering effective solutions across diverse domains. Skilled in React.js, Node.js, WordPress, and PHP, with a strong track record of building intuitive user interfaces and scalable applications. Proficient in Microsoft Power Automate and Power Apps, enabling streamlined business processes and enhanced operational efficiency. Dedicated to optimizing user experiences and passionate about continuous learning to stay current with the latest technological advancements.</p>
+                                    <span className="tagline">Meet the Minds Behind the Magic</span>
+                                    <h1>{`Hi, Meet Our Team! `}<span className="wrap">{text}</span></h1>
+                                    <p> We are a group of enthusiastic and results-driven professionals, each bringing 
+  2+ years of hands-on experience across diverse domains. From creating scalable 
+  full-stack applications to crafting intuitive front-end interfaces and building 
+  innovative mobile apps, our team is passionate about delivering impactful solutions 
+  to meet modern challenges. Here's a quick look at our core expertise:</p>
+  <p>
+  Together, we’re committed to pushing boundaries, solving problems, and turning 
+  ideas into reality. Let's build something amazing!
+</p>
                                     <button onClick={scrollToConnect}>Let's connect <ArrowRightCircle size={25} /></button>
                                 </div>
                             }
