@@ -1,7 +1,5 @@
 
 import colorSharp from "../assets/img/color-sharp.png";
-
-// Example team images (replace with your team member images)
 import Alwin from "../assets/img/Alwin.png";
 import Pursoth from "../assets/img/Pursoth.png";
 import Kaviyaa from "../assets/img/Kaviyaa.png";
